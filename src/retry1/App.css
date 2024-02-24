@@ -1,0 +1,134 @@
+.App {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #4E1756;
+    width: 100%;
+    height: 100vh;
+}
+
+.container {
+    max-width: 1072px;
+    width: 100%;
+    max-height: 636px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fruitContainer {
+    width: 80%;
+    aspect-ratio: 2/1.2;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    position: relative;
+}
+
+.linesContainer {
+    height:  80%;
+    width: 80%;
+    display: flex;
+    margin: 5%;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.lines, .squares, .circles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    height: 5%;
+    background-color: #611a6b;
+    position: absolute;
+    margin: 5%;
+}
+
+
+.circles {
+    transform: rotate(-48deg) ;
+    transform-origin: left;
+}
+
+.squares {
+    transform: rotate(48deg) ;
+    transform-origin: right;
+}
+
+.smallLine {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    height: 50%;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.square, .circle, .lineElement, .lineElementWhite {
+    max-width: 6px;
+    width: 100%;
+    max-height: 6px;
+    height: 100%;
+    background-color: #FFAA00;
+    position: absolute;
+
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+.lineElement, .lineElementWhite {
+    max-width: 40px;
+    max-height: 1px;
+}
+
+.circle:nth-child(odd), .square:nth-child(odd), .lineElementWhite {
+    background-color: white;
+}
+
+.orange, .lemon, .raspberry {
+    width: 25%;
+    position: absolute;
+    z-index: 1;
+    transition: .2s;
+}
+
+.lemon {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.orange {
+    left: 0;
+    bottom: 0;
+}
+
+.raspberry  {
+    right: 0;
+    bottom: 0;
+}
+
+.orange:hover, .lemon:hover, .raspberry:hover {
+    filter: drop-shadow(0px 0px 20px white);
+}
+
+
+@keyframes move {
+    0% {
+        left: 100%;
+    }
+    100% {
+        left: 0;
+    }
+}
