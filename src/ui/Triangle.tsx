@@ -3,7 +3,7 @@ import orange from "../images/апельсин.svg";
 import lemon from "../images/лимон.svg";
 import raspberry from "../images/малина.svg";
 import {Element} from "./Element";
-import './App.css'
+import '../App.css'
 
 const Triangle = () => {
     return (

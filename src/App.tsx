@@ -1,6 +1,6 @@
 import React from 'react';
-import './retry1/App.css'
-import Triangle from "./retry1/Triangle";
+import './App.css'
+import Triangle from "./ui/Triangle";
 
 
 const App: React.FC = () => {
